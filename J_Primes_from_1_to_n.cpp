@@ -2,13 +2,9 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
+    vector< int > v ;
+cout << v.max_size() << endl ; // এটি একটি ১০^৯ এর কাছাকাছি একটি ভ্যালু রিটার্ন করে .
+// তবে অনলাইন জাজের ক্ষেত্রে সাইজ টি এত বেশি হবে না। 
 
-    for(int i=2; i<n; i++){
-        if(n%i == 1 && n%i ==n){
-            cout << i << " ";
-        }
-    }
     return 0;
 }
