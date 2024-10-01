@@ -16,6 +16,8 @@ int knapsack(int n, int W, vector<int>& weight, vector<int>& value){
         return op2;
     }
 }
+
+
 int main()
 {
     int n, W;
