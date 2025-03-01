@@ -2,7 +2,7 @@
  * Bismillahir Rahmanir Raheem
  *
  * * * * Coder   : abubakaristiak
- * * * * Created : 2025-02-28 || 18:25:05
+ * * * * Created : 2025-03-01 || 15:59:50
  * * * * File    : R_String_Score.cpp
 */
 
@@ -29,50 +29,45 @@ template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree
 
 void solve()
 {
-    int n; cin >> n;
-    string s; cin >> s;
-    deque<char> q(s.begin(), s.end());
+    int n;
+    string s;
+    cin >> n >> s;
     int score=0;
-    int i=0;
-
-    while (i<q.size())
-    {
-        char ch=q[i];
-        if(ch=='V'){
+    for(int i=0; i<s.size(); i++){
+        switch (s[i])
+        {
+        case 'V':
             score+=5;
-        }
-        else if(ch=='W'){
+            break;
+        case 'W':
             score+=2;
-        }
-        else if(ch=='X'){
-            if(i+1<q.size()){
-                q.erase(q.begin()+i+1);
+            break;
+        case 'X':
+            if(i!=s.size()-1){
+                i++;
             }
-        }
-        else if(ch=='Y'){
-            if(i+1<q.size()){
-                char nxChar=q[i+1];
-                q.erase(q.begin()+i+1);
-                q.push_back(nxChar);
+            break;
+        case 'Y':
+            if(i!=s.size()-1){
+                s.push_back(s[i+1]);
+                i++;
             }
-        }
-        else if(ch=='Z'){
-            if(i+1<q.size()){
-                if(q[i+1]=='V'){
+            break;
+        case 'Z':
+            if(i!=s.size()-1){
+                if(s[i+1]=='V'){
                     score/=5;
-                    q.erase(q.begin()+i+1);
-                }else if(q[i+1]=='W'){
+                    i++;
+                }else if(s[i+1]=='W'){
                     score/=2;
-                    q.erase(q.begin()+i+1);
+                    i++;
                 }
             }
+            break;  
         }
-        i++;
     }
     cout << score << endl;
 
-
-    
 }
 
 
