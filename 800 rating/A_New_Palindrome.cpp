@@ -2,11 +2,11 @@
  * Bismillahir Rahmanir Raheem
  *
  * * * * Coder   : abubakaristiak
- * * * * Created : 2025-04-17 || 23:42:59
- * * * * File    : C_Word_on_the_Paper.cpp
+ * * * * Created : 2025-04-17 || 23:51:50
+ * * * * File    : A_New_Palindrome.cpp
 */
 
-// https://codeforces.com/problemset/problem/1850/C
+// https://codeforces.com/problemset/problem/1832/A
 
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
@@ -29,17 +29,15 @@ template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree
 
 void solve()
 {
-    int n=8; 
-    string res="";
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            char ch; cin >> ch;
-            if(ch!='.'){
-                res+=ch;
-            }
-        }
+    string s; cin >> s;
+    int n=s.size();
+    set<int> st;
+    for(int i=0; i<n/2; i++){
+        st.insert(s[i]);
     }
-    cout << res << endl;
+    if(st.size()==1){
+        no;
+    }else yes;
 }
 
 
