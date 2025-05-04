@@ -35,7 +35,7 @@ void solve()
     if(n%2==0){
         if(n%4==0){
             yes;
-            res.push_back(2);
+            // res.push_back(2);
             for(int i=1; i<=n; i++){
                 if(i%2==0){
                     res.push_back(i);
