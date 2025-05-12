@@ -6,6 +6,7 @@
  * * * * File    : A_Summer_Camp.cpp
 */
 
+// https://codeforces.com/problemset/problem/672/A
 
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
@@ -37,7 +38,12 @@ using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node
 
 
 void solve() {
-    
+    string target="";
+    int n; cin >> n;
+    for(int i=1; i<=n; i++){
+        target+=to_string(i);
+    }
+    cout << target[n-1] << endl;
 }
 
 
