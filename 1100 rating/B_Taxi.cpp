@@ -42,7 +42,42 @@ using namespace __gnu_pbds;
 template <typename T>
 using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
+void solve() {
+    ll n; cin >> n;
+    vector<ll> v(n);
+    ll cnt1=0, cnt2=0, cnt3=0, cnt4=0, cnt=0;
+    for(ll i=0; i<n; i++){
+        cin >> v[i];
+        if(v[i]==4){
+            cnt4+=1;
+        }
+        else if(v[i]==3){
+            cnt3+=1;
+        }
+        else if(v[i]==2){
+            cnt2+=2;
+        }else{
+            cnt1+=1;
+        }
+    }
+    cnt+=cnt4;
+    cnt+=cnt3;
+    cnt+=cnt2/4;
+    ll rem=cnt2%4;
 
+    if(cnt3<cnt1){
+        rem+=(cnt1-cnt3);
+    }
+    cnt+=rem/4;
+    rem=rem%4;
+    if(rem>=1){
+        cnt+=1;
+    }
+    cout << cnt <<endl;
+}
+
+
+/*
 void solve() {
     ll n; cin >> n;
     vector<ll> v(n);
@@ -82,7 +117,7 @@ void solve() {
     }
     cout << cnt << endl;
 
-}
+}*/
 
 
 int main() {
