@@ -6,6 +6,9 @@
 ||    abubakar119147@gmail.com       ||
 ||-----------------------------------||
 */
+
+// https://codeforces.com/contest/1747/problem/A
+
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -41,14 +44,14 @@ using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node
 
 
 void solve() {
-    int n; cin >> n;
-    vector<int> v(n);
-    int sum=0;
-    for(int i=0; i<n; i++){
+    ll n; cin >> n;
+    vector<ll> v(n);
+    ll sum=0;
+    for(ll i=0; i<n; i++){
         cin >> v[i];
         sum+=v[i];
     }
-    int res=abs(sum);
+    ll res=abs(sum);
     cout << res << endl;
 
 }
@@ -56,7 +59,7 @@ void solve() {
 
 int main() {
     fast();
-    int t = 1;
+    ll t = 1;
     cin >> t;
     while(t--){
         solve();
