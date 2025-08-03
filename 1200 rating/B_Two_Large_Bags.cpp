@@ -6,6 +6,9 @@
 ||    abubakar119147@gmail.com       ||
 ||-----------------------------------||
 */
+
+// https://codeforces.com/problemset/problem/2067/B
+
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
